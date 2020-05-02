@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       diceImage1=one;
       diceImage2=five;
-      this.showmsg ='start game';
+      this.showmsg ='Start Game';
 
     });
   }
@@ -173,29 +173,45 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple,
       appBar: AppBar(
         title: Text('Dice roller'),
+        
       ),
       body: Container(
         child: Center(
           child:Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+
+               Container(
+             padding: EdgeInsets.all(20.0),
+             child: Text('Make the sum of Dice = 8',
+             style: TextStyle(fontSize: 30.0,
+             fontWeight: FontWeight.bold,color: Colors.orangeAccent,
+             ),
+             ),
+             ),
+
+             SizedBox(height: 30),
+
+             
               Image(image: diceImage1,
               width: 100.0,
               height: 100.0
               ,),
-              SizedBox(height: 10),
+              SizedBox(height: 30),
               Image(image: diceImage2,
               width: 100.0,
-              height: 100.0
-              ,),
+              height: 100.0,
+              ),
+              
 
               Container(
              padding: EdgeInsets.all(20.0),
              child: Text(this.showmsg,
              style: TextStyle(fontSize: 20.0,
-             fontWeight: FontWeight.bold,
+             fontWeight: FontWeight.bold,color: Colors.yellowAccent
              ),
              ),
              ),
@@ -204,8 +220,8 @@ class _HomePageState extends State<HomePage> {
               Container(
              padding: EdgeInsets.all(20.0),
              child: Text(this.showmoney,
-             style: TextStyle(fontSize: 20.0,
-             fontWeight: FontWeight.bold,
+             style: TextStyle(fontSize: 35.0,
+             fontWeight: FontWeight.bold, color: Colors.orangeAccent
              ),
              ),
              ),

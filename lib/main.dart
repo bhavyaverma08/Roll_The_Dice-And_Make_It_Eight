@@ -12,9 +12,11 @@ class MyApp extends StatelessWidget {
       title: 'DICE ROLLER',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.yellow
+        primarySwatch: Colors.yellow,
+        
       ),
       home: HomePage(),
+      
     );
   }
 }
